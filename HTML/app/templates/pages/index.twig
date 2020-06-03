@@ -4,5 +4,58 @@
 {% set page_ttl =  'Pizza' %}
 
 {% block content %}
-   This is content!
+   <div class="header">
+      <div class="container">
+         <div class="burger-button">
+            <hr class="burger-button__line">
+            <hr class="burger-button__line burger-button__line-center">
+            <hr class="burger-button__line">
+         </div>
+         <div class="cart-button">
+            <div class="cart-button__count">0</div>
+            <i class="fas fa-shopping-cart"></i>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="block-title">
+         <p class="block-title__text">Our menu</p>
+         <p class="block-title__subtext">Our pizza is prepared from the freshest ingredients and with huge love</p>
+      </div>
+        <div class="swiper-container">
+    <div class="swiper-wrapper">
+    <!-- -->
+      <div class="swiper-slide">
+         <div class="pizza">
+            <div class="pizza__photo" style="background-image: url('/assets/img/pizza1.png')"></div>
+            <p class="pizza__title">Pepperoni Dolmio El De Torro</p>
+            <p class="pizza__desc">Flour, water, ketchup, cheese, chicken</p>
+            <p class="pizza__kkal"><i class="fas fa-fire pizza__kkal-logo"></i> 346 kkal</p>
+            <div class="price">
+               <div class="price__text">12 $ / 1 pcs</div>
+               <div class="price__button"><i class="fas fa-shopping-cart"></i></div>
+         </div>
+         </div>
+      </div>
+    <!-- -->
+    <!-- -->
+      <div class="swiper-slide">
+         <div class="pizza">
+            <div class="pizza__photo" style="background-image: url('/assets/img/pizza1.png')"></div>
+            <p class="pizza__title">Pepperoni Dolmio El De Torro</p>
+            <p class="pizza__desc">Flour, water, ketchup, cheese, chicken</p>
+            <p class="pizza__kkal"><i class="fas fa-fire pizza__kkal-logo"></i> 346 kkal</p>
+            <div class="price">
+               <div class="price__text">12 $ / 1 pcs</div>
+               <div class="price__button"><i class="fas fa-shopping-cart"></i></div>
+         </div>
+         </div>
+      </div>
+    <!-- -->
+    </div>
+      </div>
+   </div>
+
 {% endblock content %}
+

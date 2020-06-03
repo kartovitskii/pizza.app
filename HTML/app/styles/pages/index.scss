@@ -1,0 +1,140 @@
+.header {
+    background: #fff;
+    padding: 30px 25px;
+    border-bottom: 2px solid #FDCB6E;
+    background: #f5f5f5;
+}
+.burger-button {
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+    float: left;
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    &__line {
+        border: 0;
+        height: 2px;
+        background: #2D3436;
+    }
+    &__line-center {
+        margin: 6px 0px;
+        margin-right: 8px;
+        background: #2D3436;
+    }
+}
+
+
+.swiper-container {
+    width: 100%;
+    height: 324px;
+    margin: 30px 0;
+  }
+
+  .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    text-align: center;
+    background: #F5F5F5;
+    border-radius: 10px 10px 10px 0px;
+  }
+
+  .pizza {
+      box-sizing: border-box;
+    //  padding: 0 15px;
+      &__photo {
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 120px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: 15px;
+      }
+      &__title {
+          margin-top: 5px;
+          font-size: 17px;
+          font-weight: 500;
+          padding: 0 15px;
+          height: 40px;
+      }
+      &__desc {
+          margin-top: 15px;
+          font-size: 12px;
+          font-weight: 300;
+          padding: 0 15px;
+          height: 30px;
+      }
+      &__kkal-logo {
+        color: #DF3018;
+        padding-right: 5px;
+      }
+      &__kkal {
+        font-size: 15px;
+        font-weight: 500;
+        margin-top: 15px;
+        padding: 0 15px;
+        height: 20px;
+        margin-bottom: 20px;
+      }
+  }
+  .price {
+      width: 100%;
+      &__text {
+          width: 125px;
+          display: inline-block;
+          height: 45px;
+          background: #FFE7BB;
+          float: left;
+          line-height: 45px;
+          font-size: 12px;
+      }
+      &__button {
+          width: 45px;
+          height: 45px;
+          display: inline-block;
+          background: #000;
+          line-height: 45px;
+          background: #FDCB6E;
+          color: #C68713;
+          border-radius: 0px 0px 10px 0px;
+      }
+  }
+
+  .block-title {
+    padding: 0px 25px;
+    margin-top: 25px;
+      &__text {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &__subtext {
+          font-style: 18px;
+        color: #738286;
+      }
+  }
+  .cart-button:hover {
+      cursor: pointer;
+      color: #000;
+  }
+  .cart-button {
+      display: inline-block;
+      float: right;
+      position: relative;
+      top: -20px;
+      &__count {
+          width: 16px;
+          height: 16px;
+          background:  #FDCB6E;
+          text-align: center;
+          line-height: 16px;
+          font-size: 8px;
+          border-radius: 16px;
+          position: relative;
+          top: 8px;
+          right: -10px;
+      }
+  }
+
