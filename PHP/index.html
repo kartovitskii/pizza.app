@@ -34,7 +34,6 @@
 				max-width: 768px;
 				min-width: 320px;
 				width: 100%;
-				padding: 25px;
 				height: 100vh;
 				box-sizing: border-box;
 				margin: auto;
@@ -47,9 +46,19 @@
 	<body>
 		<div id="modal-cart" class="close-modal">
 			<div class="modal-cart__container">
-				<p class="close-modal">Закрыть</p>
+				<div class="cart-modal-header">
+					<i class="close-modal fas fa-chevron-left"></i>
+				</div>
+				<div class="cnt-cart">
 
-				
+				</div>
+		
+				<div class="cart-modal-total">
+					<span class="cart-modal-total__text">Total</span><span class="cart-modal-total__price">0.00 $</span>
+					<div class="cart-modal-total__button">Send</div>
+				</div>
+
+
 			</div>
 		</div>
 

@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    $('.cart-elem__plus').click(function() {
+
+    })
     pizzasArr = [];
     $.ajax({
         url: "actions/getPizzas.php", 
@@ -15,7 +18,7 @@ $(document).ready(function() {
                     res += "<p class='pizza__desc'>" + pizzas.description[i] + "</p>";
                     res += "<p class='pizza__kkal'><i class='fas fa-fire pizza__kkal-logo'></i> " + pizzas.kkal[i] + " kkal</p>"; 
                     res += "<div class='price'><div class='price__text'>" + pizzas.sprice[i] + " $ / 1 pcs</div>";
-                    res += "<div onclick='addToCart(" + pizzas.id[i] + ")' class='price__button'><i class='fas fa-shopping-cart'></i></div>";
+                    res += "<div onclick='addToCart(" + pizzas.id[i]  + ")' class='price__button'><i class='fas fa-shopping-cart'></i></div>";
                     res += "</div>";
                     res += "</div>";
                     res += "</div>";
@@ -61,10 +64,11 @@ function initSwip() {
       });
     }
 
-let cartArr = []; //массив с ID блюда и его кол-вом
+let cartArr = []; 
 let countShop = Number($(".cart-button__count").text());
-function addToCart(id) {
+let total = 0.00;
 
+function addToCart(id) {
     if(cartArr.length > 0) {
         for(let i = 0; i < cartArr.length; i++) {
             if(cartArr[i][0] === id) {
@@ -85,20 +89,52 @@ function addToCart(id) {
     $(".cart-button__count").text(countShop);
 }
 
-function deleteElemCart(elem) {
-    cartArr.splice(elem, 1);
-    countShop--;
-    $(".cart-button__count").text(countShop);
-    addToBucket();
+function deleteElemCart(elem) { 
+    if(countShop != 0) {
+    for(let i = 0; i < cartArr.length; i++) {
+            cartArr.splice(elem, 1);
+            countShop--;
+            $(".cart-button__count").text(countShop);
+            addToBucket();
+            return;
+    }
+}
 }
 
 function addToBucket() {
-    $('.modal-cart__container').empty()
-    $('.modal-cart__container').append(function() {
-        let res = '';
+    $('.cnt-cart').empty()
+    $('.cnt-cart').append(function() {
+        let resp = ''
+        total = 0;
         for(let i = 0; i < cartArr.length; i++) {
-            res += pizzasArr[i][2] + " | " + cartArr[i][1] + " | " + pizzasArr[i][5] + " <p onclick='deleteElemCart(" + i + ")'>Del</p>";
+            let test = cartArr[i][0];
+            resp += "<div class='row'><div class='col cart-elem'><div class='cart-elem__count'><div onclick='cartElemMinus("+ i +")' class='cart-elem__minus'>-</div><div class='cart-elem__count-text'>";
+            resp += cartArr[i][1] + "</div><div onclick='cartElemPlus("+ i +")' class='cart-elem__plus'>+</div></div>";
+            resp += "<div class='cart-elem__photo' style='background-image: url(\/assets\/img\/" + pizzasArr[i][1] + ")'></div>";
+            resp += "<div class='cart-elem__text'><p class='cart-elem__title'>" + pizzasArr[test-1][2];
+            resp += "</p></div><div class='cart-elem__rem'><p class='cart-elem__price'>" + Number(pizzasArr[test-1][5] * cartArr[i][1]).toFixed(2);
+            resp += " $</p><p class='cart-elem__del'><i onclick='deleteElemCart(" + i + ")' class='fas fa-trash-alt'></i></p></div></div></div>";
+
+            total = (+(total) + +((pizzasArr[test-1][5] * cartArr[i][1]).toFixed(2))).toFixed(2);
         }
-        return res;
+        editTotal();
+        return resp;
     })
+}
+
+function editTotal() {
+    $('.cart-modal-total__price').empty()
+    $(".cart-modal-total__price").text(total + ' $')
+}
+
+function cartElemPlus(elem) {
+        cartArr[elem][1]++
+        addToBucket()
+}
+
+function cartElemMinus(elem) {
+    if(cartArr[elem][1] > 1) {
+        cartArr[elem][1]--
+        addToBucket()
+    }
 }

@@ -1,0 +1,56 @@
+{% extends "../base/template.twig" %}
+
+{% set current_page = 'index' %}
+{% set page_ttl =  'Pizza' %}
+
+{% block content %}
+
+<div class="cart-modal-header">
+    <i class="fas fa-chevron-left"></i>
+</div>
+<!-- -->
+<div class="row">
+    <div class="col cart-elem">
+        <div class="cart-elem__count">
+        <div class="cart-elem__minus">-</div>
+        <div class="cart-elem__count-text">1</div>
+        <div class="cart-elem__plus">+</div>
+    </div>
+    <div class="cart-elem__photo" style="background-image: url('/assets/img/pizza1.png')"></div>
+    <div class="cart-elem__text">
+        <p class="cart-elem__title">Pepperoni Dolmio Eltorrino</p>
+    </div>
+    <div class="cart-elem__rem">
+        <p class="cart-elem__price">2.99$</p>
+        <p class="cart-elem__del"><i class="fas fa-trash-alt"></i></p>
+    </div>
+    </div>
+</div>
+    <!-- -->
+    <!-- -->
+<div class="row">
+    <div class="col cart-elem">
+        <div class="cart-elem__count">
+        <div class="cart-elem__minus">-</div>
+        <div class="cart-elem__count-text">1</div>
+        <div class="cart-elem__plus">+</div>
+    </div>
+    <div class="cart-elem__photo" style="background-image: url('/assets/img/pizza1.png')"></div>
+    <div class="cart-elem__text">
+        <p class="cart-elem__title">Pepperoni Dolmio Eltorrino</p>
+    </div>
+    <div class="cart-elem__rem">
+        <p class="cart-elem__price">2.99$</p>
+        <p class="cart-elem__del"><i class="fas fa-trash-alt"></i></p>
+    </div>
+    </div>
+</div>
+    <!-- -->
+
+<div class="cart-modal-total">
+    <span class="cart-modal-total__text">Total</span><span class="cart-modal-total__price">34$</span>
+    <div class="cart-modal-total__button">Send</div>
+</div>
+
+{% endblock content %}
+
