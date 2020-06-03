@@ -1,4 +1,4 @@
-$(document).ready(function() {
+function initSwiperSetting() {
     var swiper = new Swiper('.swiper-container', {
       width: 170,
       spaceBetween: 25,
@@ -7,4 +7,4 @@ $(document).ready(function() {
       slidesOffsetAfter: 25,
       freeMode: true
     });
-})
+}
