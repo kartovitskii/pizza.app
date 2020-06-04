@@ -4,6 +4,63 @@
 {% set page_ttl =  'Pizza' %}
 
 {% block content %}
-  123
+<div class="detail-bg"></div>
+<div class="cart-modal-header">
+    <i class="fas fa-chevron-left"></i>
+</div>
+  <!---->
+<div class="detail-pizza">
+  <div class="detail-pizza__image" style="background-image: url('/assets/img/pizza1.png')"></div>
+  <div class="detail-pizza__text">
+    <div class="detail-pizza__title">Pepperoni Dolmio</div>
+    <div class="detail-pizza__kkal"><i class="fas fa-fire pizza__kkal-logo"></i>320 kkal</div>
+    <div class="detail-pizza__desc">Flour, water, ketchup, cheese, chicken</div>
+    <div class="detail-pizza__count">
+      <div class="detail-pizza__minus">-</div>
+      <div class="detail-pizza__number">1</div>
+      <div class="detail-pizza__plus">+</div>
+    </div>
+  </div>
+  <!---->
+<div class="pizza-size">
+  <span class="pizza-size__small">Small (20 sm)</span>
+  <span class="pizza-size__large pizza-size__active">Large (35 sm)</span>
+</div>
+
+
+
+         <p class="pizza-additives-title">Additives</p>
+
+<!---->
+<div class="additives">
+  <div class="additives__photo" style="background-image: url('/assets/img/beacon.png')"></div>
+  <div class="additives__name">Beacon <span class="additives__price">33 $</span></div>
+  <div class="additives__btn">
+    <div class="additives__disact">Add</div>
+    <div style="display: none;" class="additives__disact additives__act"><i class="fas fa-times"></i></div>
+  </div>
+</div>
+<!---->
+<!---->
+<div class="additives">
+  <div class="additives__photo" style="background-image: url('/assets/img/beacon.png')"></div>
+  <div class="additives__name">Beacon <span class="additives__price">33 $</span></div>
+  <div class="additives__btn">
+    <div class="additives__disact">Add</div>
+    <div style="display: none;" class="additives__disact additives__act"><i class="fas fa-times"></i></div>
+  </div>
+</div>
+<!---->
+<!---->
+<div class="additives">
+  <div class="additives__photo" style="background-image: url('/assets/img/beacon.png')"></div>
+  <div class="additives__name">Beacon <span class="additives__price">33 $</span></div>
+  <div class="additives__btn">
+    <div class="additives__disact">Add</div>
+    <div style="display: none;" class="additives__disact additives__act"><i class="fas fa-times"></i></div>
+  </div>
+</div>
+<!---->
+</div>
 {% endblock content %}
 

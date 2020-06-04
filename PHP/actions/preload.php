@@ -1,0 +1,5 @@
+<style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;background: #FDCB6E url('/assets/img/preload.svg') center center no-repeat;background-size:41px;}</style>
+<div id="hellopreloader"><div id="hellopreloader_preload">
+    <div style="font-size: 25px; font-weight: 300; width: 100%; text-align: center; margin-top: 80px; display: block;"><i style="margin-right: 10px; position: relative; top: 3px; font-size: 35px;" class="fas fa-pizza-slice"></i> Pizza App</div>
+</div></div>
+<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>
